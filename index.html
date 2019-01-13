@@ -22,11 +22,11 @@
     <!-- Custom styles for this template -->
     <link href="css/one-page-wonder.css" rel="stylesheet">
 
-<<<<<<< HEAD
+
     <!-- <link href = "dogapi.js" type = "text/JavaScript"> -->
     <script src="./dogapi.js"></script>
-=======
->>>>>>> f45eb8a3c19886e22543963815a9433ac9cc78a7
+
+
   </head>
 
   <body>
@@ -35,9 +35,6 @@
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
       <div class="container">
         <a class="navbar-brand" href="#">Mindful Me</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
@@ -65,18 +62,51 @@
             document.getElementById("myText").innerHTML = today;
           </script>
           <h4 class= "date-pos"><script type="text/javascript"> document.write(today)</script></h4>
+
           <h1 class="masthead-heading mb-0">WELCOME</h1>
-          <a href="/how-im-feeling" class="btn btn-primary btn-xl2 rounded-pill mt-5">How I'm Feeling Today</a>
-        </div>
-        <div class="container">
-          <a href="/my-report" class="btn btn-primary2 btn-xl rounded-pill mt-5">View my Report</a>
-          <a href="/go-chat" class="btn btn-primary2 btn-xl rounded-pill mt-5">Contact my Physician</a>
+
+          <button class="btn btn-primary btn-xl rounded-pill mt-5 toggleModal" data-toggle="modal" data-target="#exampleModal" >How Are You Feeling Today</button>
+              </div>
+
+            </div>
+
+              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+              <div class="modal-content">
+              <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Hello</h5>
+            </div>
+
+            <div class="modal-body">
+
+              <p id="body"> How motivated do you feel today? </p>
+              <div>
+                <input type="range" id="start" name="volume"
+                min="0" max="5">
+              </div>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" >Next</button>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="bg-circle-1 bg-circle"></div>
-      <div class="bg-circle-2 bg-circle"></div>
-      <div class="bg-circle-3 bg-circle"></div>
-      <div class="bg-circle-4 bg-circle"></div>
+
+      <div class="container">
+        <a href="/my-report" class="btn btn-primary2 btn-xl rounded-pill mt-5">View my Report</a>
+        <a href="/go-chat" class="btn btn-primary2 btn-xl rounded-pill mt-5">Contact my Physician</a>
+      </div>
+
+      <div>
+        <div class="bg-circle-1 bg-circle"></div>
+        <div class="bg-circle-2 bg-circle"></div>
+        <div class="bg-circle-3 bg-circle"></div>
+        <div class="bg-circle-4 bg-circle"></div>
+      </div>
+
+
     </header>
 
     <section>
@@ -92,7 +122,7 @@
           <div class="col-lg-6 order-lg-1">
             <div class="p-5">
               <h2 class="display-4">Daily Insight</h2>
-              <h3>Everyday may not be a good day, but there is good in every day. Even your worst days will only be 24 hours.</h3>
+              <h3>Everyday may not be a good day, but there is good in every day. Even if your worst day is 24 hours.</h3>
             </div>
           </div>
         </div>
