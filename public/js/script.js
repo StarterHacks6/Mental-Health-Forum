@@ -2,7 +2,17 @@ const DOGurl = 'https://dog.ceo/api/breeds/image/random';
 
 window.onload = function() {
   // Initialize Firebase
+  // var config = {
+  //   apiKey: "AIzaSyASJ1YkMOCcO19yJmmjfTO5cBJFn9-6utI",
+  //   authDomain: "starterhackers-2019-d.firebaseapp.com",
+  //   databaseURL: "https://starterhackers-2019-d.firebaseio.com",
+  //   projectId: "starterhackers-2019-d",
+  //   storageBucket: "starterhackers-2019-d.appspot.com",
+  //   messagingSenderId: "625006945828"
+  // };
+  // firebase.initializeApp(config);
   setDate();
+  changeImage();
   createChart();
   // fetchData();
 }
@@ -59,7 +69,6 @@ function changeImage() {
 		return response.json();
 	})
 	.then((response) => {
-		console.log(response)
 		document.getElementById('dog').setAttribute("src", response['message']);
 	})
 	.catch(function(){
