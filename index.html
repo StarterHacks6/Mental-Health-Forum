@@ -24,14 +24,14 @@
 
 
     <!-- <link href = "dogapi.js" type = "text/JavaScript"> -->
-    <script src="./script.js"></script>
+    <script src="/js/script.js"></script>
   </head>
 
   <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Mindful Me</a>
+        <a class="navbar-brand" href="/">Mindful Me</a>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
@@ -52,7 +52,7 @@
 
           <h1 class="masthead-heading mb-0">WELCOME</h1>
 
-          <button class="btn btn-primary btn-xl rounded-pill mt-5 toggleModal" data-toggle="modal" data-target="#exampleModal" >How Are You Feeling Today</button>
+          <button class="big-nav-button btn btn-primary btn-xl rounded-pill mt-5 toggleModal" data-toggle="modal" data-target="#exampleModal" >How Are You Feeling Today</button>
               </div>
 
             </div>
@@ -82,8 +82,8 @@
       </div>
 
       <div class="container">
-        <a href="/my-report" class="btn btn-primary2 btn-xl rounded-pill mt-5">View my Report</a>
-        <a href="/go-chat" class="btn btn-primary2 btn-xl rounded-pill mt-5">Contact my Physician</a>
+        <a href="/my-report" class="big-nav-button btn btn-primary2 btn-xl rounded-pill mt-5">View my Report</a>
+        <a href="/chat" class="big-nav-button btn btn-primary2 btn-xl rounded-pill mt-5">Contact my Physician</a>
       </div>
 
       <div>
@@ -128,9 +128,8 @@
         <div class="row align-items-center">
           <div class="col-lg-6">
             <div class="p-5">
-              <img class = "imageFormat"  src="img/dog1.jpeg" width = 300 alt="" id= "dog" onclick= "changeImage()">
+              <img class = "imageFormat"  src="" width=300 height=300 alt="Cute Dog Images" id= "dog" onclick= "changeImage()">
               <a class = "btn btn-secondary btn-xl rounded-pill mt-5" onclick = "changeImage()">Next image</a>
-              <script url = "dogapi.js"></script>
             </div>
           </div>
           <div class="col-lg-6">
@@ -172,18 +171,6 @@
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
 
     <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
-    <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyASJ1YkMOCcO19yJmmjfTO5cBJFn9-6utI",
-        authDomain: "starterhackers-2019-d.firebaseapp.com",
-        databaseURL: "https://starterhackers-2019-d.firebaseio.com",
-        projectId: "starterhackers-2019-d",
-        storageBucket: "starterhackers-2019-d.appspot.com",
-        messagingSenderId: "625006945828"
-      };
-      firebase.initializeApp(config);
-    </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
