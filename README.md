@@ -33,7 +33,7 @@ To begin using this template, choose one of the following options to get started
 ## Usage
 
 
-
+ 
 
 Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**, Owner of [Blackrock Digital](http://blackrockdigital.io/).
 
