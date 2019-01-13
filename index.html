@@ -21,8 +21,8 @@
     <!-- Custom styles for this template -->
     <link href="css/one-page-wonder.css" rel="stylesheet">
 
-
-
+    <!-- <link href = "dogapi.js" type = "text/JavaScript"> -->
+    <script src="./dogapi.js"></script>
   </head>
 
   <body>
@@ -70,7 +70,7 @@
           <div class="col-lg-6 order-lg-2">
             <div class="p-5">
               <h2 class = "display-4">What is on your mind today?</h2>
-              <textarea name = "journal" cols = "58" rows = "10"></textarea>
+              <textarea name = "journal" cols = "58" rows = "10" placeholder = "Enter text here"></textarea>
               <a class = "btn btn-secondary btn-xl rounded-pill mt-5">Done!</a>
             </div>
           </div>
@@ -89,36 +89,9 @@
         <div class="row align-items-center">
           <div class="col-lg-6">
             <div class="p-5">
-              <img src="img/dog1.jpeg" alt="" id= "dog" onclick= "changeImage()">
+              <img width = "500" height = "300" src="img/dog1.jpeg" alt="" id= "dog" onclick= "changeImage()">
               <button onclick = "changeImage()">Next image</button>
-              <!--<input type="image" src = "img/dog1.jpeg">-->
-              <script>
-                function changeImage(){
-                  if (document.getElementById('dog').getAttribute("src") === "img/dog1.jpeg"){
-                    document.getElementById('dog').setAttribute("src", "img/dog2.jpg");
-                  }
-                  else if (document.getElementById('dog').getAttribute("src") === "img/dog2.jpg"){
-                    document.getElementById('dog').setAttribute("src", "img/dog3.jpg");
-                  }
-                  else if (document.getElementById('dog').getAttribute("src") === "img/dog3.jpg"){
-                    document.getElementById('dog').setAttribute("src", "img/dog4.jpg");
-                  }
-                  else if (document.getElementById('dog').getAttribute("src") === "img/dog4.jpg"){
-                    document.getElementById('dog').setAttribute("src", "img/dog5.jpg");
-                  }
-                  else if (document.getElementById('dog').getAttribute("src") === "img/dog5.jpg"){
-                    document.getElementById('dog').setAttribute("src", "img/dog6.jpg");
-                  }
-                  else if (document.getElementById('dog').getAttribute("src") === "img/dog6.jpg"){
-                    document.getElementById('dog').setAttribute("src", "img/dog7.jpg");
-                  }
-                  else if (document.getElementById('dog').getAttribute("src") === "img/dog7.jpg"){
-                    document.getElementById('dog').setAttribute("src", "img/dog8.jpg");
-                  }
-
-                }
-              </script>
-
+              <script url = "dogapi.js"></script>
             </div>
           </div>
           <div class="col-lg-6">

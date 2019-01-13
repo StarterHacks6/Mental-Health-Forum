@@ -94,9 +94,8 @@ function watchFiles() {
 
 function storeData() {
   var qans[questionNum] = {0};
-  
-
 }
+
 
 gulp.task("default", gulp.parallel('vendor', css));
 
