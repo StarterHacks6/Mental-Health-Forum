@@ -48,17 +48,7 @@
     <header class="masthead text-center text-white">
       <div class="masthead-content">
         <div class="container">
-          <script type="text/javascript">
-            var today = new Date();
-            var dd = today.getDate();
-            var mm = today.getMonth()+1;
-            if (dd<10) dd = '0'+dd;
-            if (mm<10) mm = '0'+mm;
-            var yyyy = today.getFullYear();
-            today = mm + '/' + dd + '/' + yyyy;
-            document.getElementById("myText").innerHTML = today;
-          </script>
-          <h4 class= "date-pos"><script type="text/javascript"> document.write(today)</script></h4>
+          <h4 class= "date-pos" id="today"></h4>
 
           <h1 class="masthead-heading mb-0">WELCOME</h1>
 
