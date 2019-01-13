@@ -10,7 +10,6 @@ body {
 
 h1,
 h2,
-h4,
 h5,
 h6 {
   font-family: 'Catamaran';
@@ -21,6 +20,17 @@ h3{
   color: #4885A5;
   font-family: 'Catamaran';
   font-style: italic;
+}
+
+h4{
+  font-size: 2.0rem;
+  font-weight: 300;
+}
+
+.date-pos {
+  position: absolute;
+  top: 0;
+  left: 30;
 }
 
 .btn-xl {
@@ -96,7 +106,7 @@ header.masthead .masthead-content .masthead-subheading {
 header.masthead .bg-circle {
   z-index: 0;
   position: absolute;
-  border-radius: 100%;
+  border-radius: 75%;
   background: -webkit-gradient(linear, left bottom, left top, from(#C0E8C9), to(#7AA095));
   background: linear-gradient(0deg, #C0E8C9 0%, #7AA095 100%);
 }
