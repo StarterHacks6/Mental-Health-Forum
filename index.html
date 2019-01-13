@@ -48,11 +48,22 @@
     <header class="masthead text-center text-white">
       <div class="masthead-content">
         <div class="container">
-          <h4 class= "date-pos" id="today"></h4>
+          
+            <script type="text/javascript">
+            var today = new Date();
+            var dd = today.getDate();
+            var mm = today.getMonth()+1;
+            if (dd<10) dd = '0'+dd;
+            if (mm<10) mm = '0'+mm;
+            var yyyy = today.getFullYear();
+            today = mm + '/' + dd + '/' + yyyy;
+            document.getElementById("myText").innerHTML = today;
+          </script>
+          <h4 ><script type="text/javascript"> document.write(today)</script></h4>
 
           <h1 class="masthead-heading mb-0">WELCOME</h1>
 
-          <button class="btn btn-primary btn-xl rounded-pill mt-5 toggleModal" data-toggle="modal" data-target="#exampleModal" >How Are You Feeling Today</button>
+          <button class="btn btn-primary btn-xl rounded-pill mt-5 toggleModal" data-toggle="modal" data-target="#exampleModal" >How Are You Feeling Today?</button>
               </div>
 
             </div>

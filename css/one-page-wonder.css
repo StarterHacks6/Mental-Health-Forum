@@ -29,8 +29,8 @@ h4{
 
 .date-pos {
   position: absolute;
-  top: 0;
-  left: 30;
+  top: 40px;
+  left: center;
 }
 
 .btn-xl {
