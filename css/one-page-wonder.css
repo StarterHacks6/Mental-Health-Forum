@@ -219,6 +219,7 @@ header.masthead .bg-circle-4 {
   height = auto;
 }
 
+<<<<<<< Updated upstream
 .modal-header, .modal-body{
   color: black;
 }
@@ -231,3 +232,10 @@ label {
 input {
     margin: .4rem;
 }
+=======
+.quote-pos {
+  position: absolute;
+  
+}
+
+>>>>>>> Stashed changes
