@@ -212,7 +212,9 @@ header.masthead .bg-circle-4 {
 
 .imageFormat {
   border-radius:50%;
+  border-style: solid;
+  border-color: black;
   width = 200;
-  height = 200;
+  height = auto;
 }
 
