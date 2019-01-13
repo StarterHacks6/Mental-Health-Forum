@@ -52,21 +52,106 @@
     </nav>
 
     <header class="masthead text-center text-white">
-      <div class="masthead-content">
-        <div class="container">
-          <h4 class= "date-pos" id="today"></h4>
-          <h1 class="masthead-heading mb-0">WELCOME</h1>
-          <a href="/how-im-feeling" class="btn btn-primary btn-xl2 rounded-pill mt-5">How I'm Feeling Today</a>
+        <div class="masthead-content">
+            <div class="container">
+                <h4 id="today"></h4>
+
+                <h1 class="masthead-heading mb-0">WELCOME</h1>
+
+                <button class="btn btn-primary btn-xl rounded-pill mt-5 toggleModal" data-toggle="modal"
+                        data-target="#exampleModal">How Are You Feeling Today?
+                </button>
+            </div>
         </div>
-        <div class="container">
-          <a href="/my-report" class="btn btn-primary2 btn-xl rounded-pill mt-5">View my Report</a>
-          <a href="/chat" class="btn btn-primary2 btn-xl rounded-pill mt-5">Contact my Physician</a>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Hello!</h5>
+                    </div>
+                    <script>
+                        global
+                        var question = 1;
+                    </script>
+                    <div class="modal-body">
+
+                        <p id="body"> How motivated do you feel today? </p>
+
+                        <div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                       value="option1">
+                                <label class="form-check-label" for="inlineRadio1">😓</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                       value="option2">
+                                <label class="form-check-label" for="inlineRadio2">😔</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+                                       value="option3">
+                                <label class="form-check-label" for="inlineRadio3">😐</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4"
+                                       value="option4">
+                                <label class="form-check-label" for="inlineRadio4">😃</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5"
+                                       value="option5">
+                                <label class="form-check-label" for="inlineRadio5">😁 </label>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button id="next" type="button" class="btn btn-secondary" onclick="nextQuestion()">Next</button>
+                        <script type="text/javascript">
+                            var question = 1;
+
+                            function nextQuestion() {
+
+
+                                if (document.getElementById('inlineRadio1').checked == false && document.getElementById('inlineRadio2').checked == false && document.getElementById('inlineRadio3').checked == false && document.getElementById('inlineRadio4').checked == false && document.getElementById('inlineRadio5').checked == false) {
+                                    return;
+                                }
+
+                                if (question == 1) {
+                                    document.getElementById("body").innerHTML = "Do you feel good about what you ate today?";
+                                    question = 2;
+                                } else if (question == 2) {
+                                    document.getElementById("body").innerHTML = "Do you feel well-rested?";
+                                    document.getElementById("next").disabled = true;
+                                }
+
+                                document.getElementById('inlineRadio1').checked = false;
+                                document.getElementById('inlineRadio2').checked = false;
+                                document.getElementById('inlineRadio3').checked = false;
+                                document.getElementById('inlineRadio4').checked = false;
+                                document.getElementById('inlineRadio5').checked = false;
+                            }
+                        </script>
+
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="bg-circle-1 bg-circle"></div>
-      <div class="bg-circle-2 bg-circle"></div>
-      <div class="bg-circle-3 bg-circle"></div>
-      <div class="bg-circle-4 bg-circle"></div>
+
+        <div class="container">
+            <a href="/my-report" class="big-nav-button btn btn-primary2 btn-xl rounded-pill mt-5">View my Report</a>
+            <a href="/chat" class="big-nav-button btn btn-primary2 btn-xl rounded-pill mt-5">Contact my Physician</a>
+        </div>
+
+        <div>
+            <div class="bg-circle-2 bg-circle"></div>
+            <div class="bg-circle-4 bg-circle"></div>
+        </div>
     </header>
 
     <div class="chart-b container">

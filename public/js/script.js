@@ -25,7 +25,7 @@ function sendMessage() {
 
   socket.emit('chat message', $('#m').val());
   $('#m').val('');
-  return false;
+  return false;so
 }
 
 function setDate() {

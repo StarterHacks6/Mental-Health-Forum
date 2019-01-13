@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -9,15 +9,17 @@
     <meta name="author" content="">
 
     <title>MindfulMe</title>
-     <link rel="shortcut icon" type = "image/png" href="newBlueSun.png" />
+    <link rel="shortcut icon" type="image/png" href="newBlueSun.png"/>
 
     <!-- Bootstrap core CSS -->
     <!-- <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet"> -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
     <!-- Custom fonts for this template -->
     <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i"
+          rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="css/one-page-wonder.css" rel="stylesheet">
@@ -26,207 +28,203 @@
     <!-- <link href = "dogapi.js" type = "text/JavaScript"> -->
     <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
     <script src="/js/script.js"></script>
-  </head>
+</head>
 
-  <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
-      <div class="container">
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <div class="container">
         <a class="navbar-brand" href="/">MindfulMe</a>
         <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Sign Up</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Log In</a>
-            </li>
-          </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sign Up</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Log In</a>
+                </li>
+            </ul>
         </div>
-      </div>
-    </nav>
+    </div>
+</nav>
 
-    <header class="masthead text-center text-white">
-      <div class="masthead-content">
+<header class="masthead text-center text-white">
+    <div class="masthead-content">
         <div class="container">
-          <h4 id="today"></h4>
+            <h4 id="today"></h4>
 
-          <h1 class="masthead-heading mb-0">WELCOME</h1>
+            <h1 class="masthead-heading mb-0">WELCOME</h1>
 
-          <button class="btn btn-primary btn-xl rounded-pill mt-5 toggleModal" data-toggle="modal" data-target="#exampleModal" >How Are You Feeling Today?</button>
-              </div>
-
-            </div>
-
-              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog" role="document">
-              <div class="modal-content">
-              <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Hello!</h5>
-            </div>
-            <script>
-                global var question = 1;
-            </script>
-            <div class="modal-body">
-
-              <p id="body"> How motivated do you feel today? </p>
-
-              <div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                <label class="form-check-label" for="inlineRadio1">😓</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                <label class="form-check-label" for="inlineRadio2">😔</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" >
-                <label class="form-check-label" for="inlineRadio3">😐</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4" >
-                <label class="form-check-label" for="inlineRadio4">😃</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5" >
-                <label class="form-check-label" for="inlineRadio5">😁 </label>
-              </div>
-
-              </div>
-            </div>
-
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button id = "next" type="button" class="btn btn-secondary" onclick = "nextQuestion()">Next</button>
-              <script type="text/javascript">
-                var question = 1;
-                function nextQuestion(){
-
-
-                  if(document.getElementById('inlineRadio1').checked == false && document.getElementById('inlineRadio2').checked == false && document.getElementById('inlineRadio3').checked == false && document.getElementById('inlineRadio4').checked == false &&document.getElementById('inlineRadio5').checked == false){
-                    return;
-                  }
-
-                  if(question == 1){
-                    document.getElementById("body").innerHTML = "Do you feel good about what you ate today?";
-                    question =2;
-                  }
-                  else if(question==2){
-                    document.getElementById("body").innerHTML = "Do you feel well-rested?";
-                    document.getElementById("next").disabled = true;
-                  }
-
-                  document.getElementById('inlineRadio1').checked = false;
-                  document.getElementById('inlineRadio2').checked = false;
-                  document.getElementById('inlineRadio3').checked = false;
-                  document.getElementById('inlineRadio4').checked = false;
-                  document.getElementById('inlineRadio5').checked = false;
-                }
-              </script>
-
-            </div>
-          </div>
+            <button class="btn btn-primary btn-xl rounded-pill mt-5 toggleModal" data-toggle="modal"
+                    data-target="#exampleModal">How Are You Feeling Today?
+            </button>
         </div>
-      </div>
+    </div>
 
-      <div class="container">
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Hello!</h5>
+                </div>
+                <script>
+                    global
+                    var question = 1;
+                </script>
+                <div class="modal-body">
+
+                    <p id="body"> How motivated do you feel today? </p>
+
+                    <div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                   value="option1">
+                            <label class="form-check-label" for="inlineRadio1">😓</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                   value="option2">
+                            <label class="form-check-label" for="inlineRadio2">😔</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+                                   value="option3">
+                            <label class="form-check-label" for="inlineRadio3">😐</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4"
+                                   value="option4">
+                            <label class="form-check-label" for="inlineRadio4">😃</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5"
+                                   value="option5">
+                            <label class="form-check-label" for="inlineRadio5">😁 </label>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button id="next" type="button" class="btn btn-secondary" onclick="nextQuestion()">Next</button>
+                    <script type="text/javascript">
+                        var question = 1;
+
+                        function nextQuestion() {
+
+
+                            if (document.getElementById('inlineRadio1').checked == false && document.getElementById('inlineRadio2').checked == false && document.getElementById('inlineRadio3').checked == false && document.getElementById('inlineRadio4').checked == false && document.getElementById('inlineRadio5').checked == false) {
+                                return;
+                            }
+
+                            if (question == 1) {
+                                document.getElementById("body").innerHTML = "Do you feel good about what you ate today?";
+                                question = 2;
+                            } else if (question == 2) {
+                                document.getElementById("body").innerHTML = "Do you feel well-rested?";
+                                document.getElementById("next").disabled = true;
+                            }
+
+                            document.getElementById('inlineRadio1').checked = false;
+                            document.getElementById('inlineRadio2').checked = false;
+                            document.getElementById('inlineRadio3').checked = false;
+                            document.getElementById('inlineRadio4').checked = false;
+                            document.getElementById('inlineRadio5').checked = false;
+                        }
+                    </script>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
         <a href="/my-report" class="big-nav-button btn btn-primary2 btn-xl rounded-pill mt-5">View my Report</a>
         <a href="/chat" class="big-nav-button btn btn-primary2 btn-xl rounded-pill mt-5">Contact my Physician</a>
-      </div>
+    </div>
 
-      <div>
-        <div class="bg-circle-1 bg-circle"></div>
+    <div>
         <div class="bg-circle-2 bg-circle"></div>
-        <div class="bg-circle-3 bg-circle"></div>
         <div class="bg-circle-4 bg-circle"></div>
-      </div>
+    </div>
+</header>
 
-
-    </header>
-
-    <section>
-      <div class="container">
+<section>
+    <div class="container">
         <div class="row align-items-center">
-          <div class="col-lg-6 order-lg-2">
-            <div class="p-5">
-              <h2 class = "display-4">What is on your mind today?</h2>
-              <textarea class = "journal-format" name = "journal" cols = "58" rows = "10" placeholder = "Enter your thoughts here." id = 'output'></textarea>
+            <div class="col-lg-6 order-lg-2">
+                <div class="p-5">
+                    <h2 class="display-4">What is on your mind today?</h2>
+                    <textarea class="journal-format" name="journal" cols="58" rows="10"
+                              placeholder="Enter your thoughts here." id='output'></textarea>
 
-              <!--CLEARS TEXT-->
-              <a class = "btn btn-secondary btn-xl rounded-pill mt-5" onclick = "javascript:eraseText();">Done!</a>
-              <script>
-                function eraseText(){
-                  document.getElementById("output").value = "";
-                }
-              </script>
+                    <!--CLEARS TEXT-->
+                    <a class="btn btn-secondary btn-xl rounded-pill mt-5" onclick="javascript:eraseText();">Done!</a>
+                    <script>
+                        function eraseText() {
+                            document.getElementById("output").value = "";
+                        }
+                    </script>
+                </div>
             </div>
-          </div>
-          <div class="col-lg-6 order-lg-1">
-            <div class="p-5">
-              <h2 class="display-4">Daily Insight</h2>
-              <h3>"Everyday may not be a good day, but there is good in every day. Even if your worst day is 24 hours."</h3>
+            <div class="col-lg-6 order-lg-1">
+                <div class="p-5">
+                    <h2 class="display-4">Daily Insight</h2>
+                    <h3>"Everyday may not be a good day, but there is good in every day. Even if your worst day is 24
+                        hours."</h3>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </section>
+    </div>
+</section>
 
-    <section>
-      <div class="container">
+<section>
+    <div class="container">
         <div class="row align-items-center">
-          <div class="col-lg-6">
-            <div class="p-5">
+            <div class="col-lg-6">
+                <div class="p-5">
 
-              <img class = "imageFormat"  src="img/dog1.jpeg" width = 300 alt="" id= "dog" onclick= "changeImage()">
-              <a class = "btn btn-secondary btn-xl rounded-pill mt-5" onclick = "changeImage()">Show me another dog</a>
-              <script url = "dogapi.js"></script>
+                    <img class="imageFormat" src="img/dog1.jpeg" width=300 alt="" id="dog" onclick="changeImage()">
+                    <a class="btn btn-secondary btn-xl rounded-pill mt-5" onclick="changeImage()">Show me another
+                        dog</a>
+                    <script url="dogapi.js"></script>
+                </div>
             </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="p-5">
-              <h2 class="display-4">Daily Insight</h2>
-              <h3>"Have patience with everything unresolved in your heart and try to love the questions themselves."</h3>
+            <div class="col-lg-6">
+                <div class="p-5">
+                    <h2 class="display-4">Daily Insight</h2>
+                    <h3>"Have patience with everything unresolved in your heart and try to love the questions
+                        themselves."</h3>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </section>
+    </div>
+</section>
 
-    <!--<section>
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6 order-lg-2">
-            <div class="p-5">
-              <img class="img-fluid rounded-circle" src="img/03.jpg" alt="">
-            </div>
-          </div>
-          <div class="col-lg-6 order-lg-1">
-            <div class="p-5">
-              <h2 class="display-4">Daily Insight</h2>
-              <h3>Character cannot be developed in ease and quiet. Only through experience of trial and suffering can the soul be strengthened, ambition inspired, and success acheived.</h3>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
-    <!-- Footer -->
-    <footer class="py-5 bg-black">
-      <div class="container">
+<!-- Footer -->
+<footer class="py-5 bg-black">
+    <div class="container">
         <p class="m-0 text-center text-white small">Copyright &copy; MindfulMe 2019</p>
-      </div>
-      <!-- /.container -->
-    </footer>
+    </div>
+    <!-- /.container -->
+</footer>
 
-    <!-- <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+<!-- <script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
 
-    <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
 
-  </body>
+</body>
 
 </html>
