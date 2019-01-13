@@ -21,6 +21,8 @@
     <!-- Custom styles for this template -->
     <link href="css/one-page-wonder.css" rel="stylesheet">
 
+
+
   </head>
 
   <body>
@@ -86,7 +88,36 @@
         <div class="row align-items-center">
           <div class="col-lg-6">
             <div class="p-5">
-              <img class="img-fluid rounded-circle" src="img/02.jpg" alt="">
+              <img src="img/dog1.jpeg" alt="" id= "dog" onclick= "changeImage()">
+              <button onclick = "changeImage()">Next image</button>
+              <!--<input type="image" src = "img/dog1.jpeg">-->
+              <script>
+                function changeImage(){
+                  if (document.getElementById('dog').getAttribute("src") === "img/dog1.jpeg"){
+                    document.getElementById('dog').setAttribute("src", "img/dog2.jpg");
+                  }
+                  else if (document.getElementById('dog').getAttribute("src") === "img/dog2.jpg"){
+                    document.getElementById('dog').setAttribute("src", "img/dog3.jpg");
+                  }
+                  else if (document.getElementById('dog').getAttribute("src") === "img/dog3.jpg"){
+                    document.getElementById('dog').setAttribute("src", "img/dog4.jpg");
+                  }
+                  else if (document.getElementById('dog').getAttribute("src") === "img/dog4.jpg"){
+                    document.getElementById('dog').setAttribute("src", "img/dog5.jpg");
+                  }
+                  else if (document.getElementById('dog').getAttribute("src") === "img/dog5.jpg"){
+                    document.getElementById('dog').setAttribute("src", "img/dog6.jpg");
+                  }
+                  else if (document.getElementById('dog').getAttribute("src") === "img/dog6.jpg"){
+                    document.getElementById('dog').setAttribute("src", "img/dog7.jpg");
+                  }
+                  else if (document.getElementById('dog').getAttribute("src") === "img/dog7.jpg"){
+                    document.getElementById('dog').setAttribute("src", "img/dog8.jpg");
+                  }
+
+                }
+              </script>
+
             </div>
           </div>
           <div class="col-lg-6">
