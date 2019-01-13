@@ -9,7 +9,7 @@
     <meta name="author" content="">
 
     <title>Mindful Me</title>
-     <link rel="shortcut icon" type = "image/png" href="Sun.png" />
+     <link rel="shortcut icon" type = "image/png" href="blueSun.png" />
 
     <!-- Bootstrap core CSS -->
     <!-- <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet"> -->
@@ -30,7 +30,6 @@
   </head>
 
   <body>
-
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
       <div class="container">
@@ -115,8 +114,15 @@
           <div class="col-lg-6 order-lg-2">
             <div class="p-5">
               <h2 class = "display-4">What is on your mind today?</h2>
-              <textarea name = "journal" cols = "58" rows = "10" placeholder = "Enter text here"></textarea>
-              <a class = "btn btn-secondary btn-xl rounded-pill mt-5">Done!</a>
+              <textarea name = "journal" cols = "58" rows = "10" placeholder = "Enter text here" id = 'output'></textarea>
+
+              <!--CLEARS TEXT-->
+              <a class = "btn btn-secondary btn-xl rounded-pill mt-5" onclick = "javascript:eraseText();">Done!</a>
+              <script>
+                function eraseText(){
+                  document.getElementById("output").value = "";
+                }
+              </script>
             </div>
           </div>
           <div class="col-lg-6 order-lg-1">
@@ -134,15 +140,14 @@
         <div class="row align-items-center">
           <div class="col-lg-6">
             <div class="p-5">
-              <img width = "500" height = "300" src="img/dog1.jpeg" alt="" id= "dog" onclick= "changeImage()">
-              <button onclick = "changeImage()">Next image</button>
+              <img class = "imageFormat"  src="img/dog1.jpeg" width = 300 alt="" id= "dog" onclick= "changeImage()">
+              <a class = "btn btn-secondary btn-xl rounded-pill mt-5" onclick = "changeImage()">Next image</a>
               <script url = "dogapi.js"></script>
             </div>
           </div>
           <div class="col-lg-6">
             <div class="p-5">
-              <h2 class="display-4">We salute you!</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
+              <h3>Have patience with everything unresolved in your heart and try to love the questions themselves.</h3>
             </div>
           </div>
         </div>
