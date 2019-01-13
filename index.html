@@ -49,18 +49,7 @@
     <header class="masthead text-center text-white">
       <div class="masthead-content">
         <div class="container">
-
-            <script type="text/javascript">
-            var today = new Date();
-            var dd = today.getDate();
-            var mm = today.getMonth()+1;
-            if (dd<10) dd = '0'+dd;
-            if (mm<10) mm = '0'+mm;
-            var yyyy = today.getFullYear();
-            today = mm + '/' + dd + '/' + yyyy;
-            document.getElementById("myText").innerHTML = today;
-          </script>
-          <h4 ><script type="text/javascript"> document.write(today)</script></h4>
+          <h4 id="today"></h4>
 
           <h1 class="masthead-heading mb-0">WELCOME</h1>
 
@@ -81,7 +70,7 @@
             <div class="modal-body">
 
               <p id="body"> How motivated do you feel today? </p>
-              
+
               <div>
               <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
@@ -113,7 +102,7 @@
               <script type="text/javascript">
                 var question = 1;
                 function nextQuestion(){
-                  
+
 
                   if(document.getElementById('inlineRadio1').checked == false && document.getElementById('inlineRadio2').checked == false && document.getElementById('inlineRadio3').checked == false && document.getElementById('inlineRadio4').checked == false &&document.getElementById('inlineRadio5').checked == false){
                     return;
@@ -128,7 +117,7 @@
                     question =3;
                     document.getElementById("next").disabled = true;
                   }
-                  
+
                   document.getElementById('inlineRadio1').checked = false;
                   document.getElementById('inlineRadio2').checked = false;
                   document.getElementById('inlineRadio3').checked = false;
