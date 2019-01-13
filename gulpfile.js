@@ -8,6 +8,7 @@ const plumber = require("gulp-plumber");
 const rename = require("gulp-rename");
 const sass = require("gulp-sass");
 const pkg = require('./package.json');
+const questionNum = 3;
 
 // Set the banner content
 const banner = ['/*!\n',
@@ -88,6 +89,13 @@ function browserSyncReload(done) {
 function watchFiles() {
   gulp.watch("./scss/**/*", css);
   gulp.watch("./**/*.html", browserSyncReload);
+}
+
+
+function storeData() {
+  var qans[questionNum] = {0};
+  
+
 }
 
 gulp.task("default", gulp.parallel('vendor', css));
