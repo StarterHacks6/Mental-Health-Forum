@@ -112,8 +112,8 @@ header.masthead .bg-circle {
 }
 
 header.masthead .bg-circle-1 {
-  height: 90rem;
-  width: 90rem;
+  height: 85rem;
+  width: 85rem;
   bottom: -55rem;
   left: -55rem;
 }
@@ -159,7 +159,7 @@ header.masthead .bg-circle-4 {
 .btn-primary {
   background-color: #4885A5;
   border-color: #1E5572;
-  padding: 20px 30px;
+  padding: 20px 40px;
 }
 
 .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
@@ -224,7 +224,7 @@ header.masthead .bg-circle-4 {
   border-width: 3px;
   border-color: grey;
   background-color: #D2DDE7;
-  color: #226BA3 ; 
+  color: #1C5886; 
 }
 
 .modal-header, .modal-body{
