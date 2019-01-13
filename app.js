@@ -1,12 +1,13 @@
+var express = require('express');
 var app = require('express')();
 var server = require('http').Server(app);
-const express = require('express')
-var port = process.env.PORT || 3000;
-
 var io = require('socket.io')(server);
+var bodyParser = require('body-parser')
+
+server.listen(3000);
 
 app.use(express.static('public'))
-
+app.use(bodyParser.json())
 
 app.get('/', function(req, res) {
   res.sendFile(__dirname + '/index.html');
@@ -25,5 +26,3 @@ io.on('connection', function(socket){
     io.emit('chat message', msg);
   });
 });
-
-app.listen(port, () => console.log(`Mental app listening on port ${port}!`))

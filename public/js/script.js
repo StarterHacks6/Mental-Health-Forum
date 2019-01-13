@@ -1,5 +1,5 @@
 const DOGurl = 'https://dog.ceo/api/breeds/image/random';
-
+var socket;
 window.onload = function() {
   // Initialize Firebase
   // var config = {
@@ -14,7 +14,30 @@ window.onload = function() {
   setDate();
   changeImage();
   createChart();
+  //setupChat();
   // fetchData();
+}
+
+function setupChat() {
+  socket = io.connect('http://localhost:3000');
+  $('form').submit(function(){
+      socket.emit('chat message', $('#m').val());
+      $('#m').val('');
+      return false;
+    });
+
+  socket.on('chat message', function(msg){
+      $('#messages').append($('<li>').text(msg));
+      window.scrollTo(0, document.body.scrollHeight);
+    });
+}
+
+function sendMessage() {
+  let msg = document.getElementById("m").value;
+
+  socket.emit('chat message', $('#m').val());
+  $('#m').val('');
+  return false;
 }
 
 function setDate() {
