@@ -28,9 +28,11 @@ h4{
 }
 
 .date-pos {
-  position: absolute;
-  top: 40px;
-  left: center;
+  margin: auto;
+  width: 50%;
+ /*  position: absolute;
+  top: 0;
+  left: 30; */
 }
 
 .btn-xl {
@@ -115,7 +117,7 @@ header.masthead .bg-circle-1 {
   height: 90rem;
   width: 90rem;
   bottom: -55rem;
-  left: -55rem;
+  left: -62.5rem;
 }
 
 header.masthead .bg-circle-2 {
@@ -217,15 +219,6 @@ header.masthead .bg-circle-4 {
   height = auto;
 }
 
-
-.journal-format {
-  border-radius: 8px;
-  border-width: 3px;
-  border-color: grey;
-  background-color: #D2DDE7;
-  color: #1C5886; 
-}
-
 .modal-header, .modal-body{
   color: black;
 }
@@ -235,3 +228,6 @@ label {
     font: 1rem 'Fira Sans', sans-serif;
 }
 
+input {
+    margin: .4rem;
+}
