@@ -1,6 +1,6 @@
 
-# Mental Me
-[Mental Me] (file:///Users/angeladietz/Documents/SE%201B/StarterHacks/Mental-Health-Forum/index.html) is an interface that allows for easy, frequent communication between, doctors, therapists, and their patients.
+# Mindful Me
+Mental Me is an interactive platform that bridges that gap between doctors and patients outside the office. It allows for easy, and frequent communication between them.
 
 
 
