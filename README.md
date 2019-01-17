@@ -1,6 +1,6 @@
 
 # Mindful Me
-Mental Me is an interactive platform that bridges that gap between doctors and patients outside the office. It allows for easy, and frequent communication between them.
+Mindful Me is an interactive platform that bridges that gap between doctors and patients outside the office. It allows for easy, and frequent communication between them.
 
 
 
